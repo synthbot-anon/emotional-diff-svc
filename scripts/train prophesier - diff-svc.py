@@ -4,7 +4,7 @@
 # In[ ]:
 
 
-character_name = "sunset" # I don't know if it's okay to use spaces here
+character_name = "bestpony" # I don't know if it's okay to use spaces here
 dataset_path = "/workspace/data.zip"
 binary_path = "/workspace/binary.zip" # use a binary.zip file if you have one, otherwise one will be created here
 model_path = "/workspace/models" # pick a directory for storing .ckpt (model) files
@@ -192,8 +192,8 @@ else:
 os.chdir(install_directory)
 if glob.glob(f"{model_path}/*.ckpt"):
     print('resuming from last checkpoint')
-    get_ipython().system('CUDA_VISIBLE_DEVICES=0 python run.py --config training/config_nsf.yaml --exp_name sunset')
+    get_ipython().system('CUDA_VISIBLE_DEVICES=0 python run.py --config training/config_nsf.yaml --exp_name "{character_name}"')
 else:
     print('starting a new training run')
-    get_ipython().system('CUDA_VISIBLE_DEVICES=0 python run.py --config training/config_nsf.yaml --exp_name sunset --reset')
+    get_ipython().system('CUDA_VISIBLE_DEVICES=0 python run.py --config training/config_nsf.yaml --exp_name "{character_name}" --reset')
 

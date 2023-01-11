@@ -11,7 +11,7 @@ model_path = "/workspace/models" # pick a directory for storing .ckpt (model) fi
 mount_gdrive = '' # set this to '/gdrive' if you're on Colab and want to use your gdrive
 save_every = 2000 # 2000 steps = every ~10m on an RTX 3090, ~30m on RTX 3080
 
-install_dependencies = False # set this to false if you've already successfully run this cell
+install_dependencies = True # set this to false if you've already successfully run this cell
 install_directory = '/workspace/diff-svc' # if you're running locally, pick a directory you can modify
 
 # after setting everything above, run this cell

@@ -440,7 +440,7 @@ class BaseTrainer:
 
         # distributed backend choice
         self.use_ddp = False
-        self.use_dp = False
+        self.use_dp = True
         self.single_gpu = False
         self.distributed_backend = 'ddp' if self.num_gpus > 0 else 'dp'
         self.set_distributed_mode(self.distributed_backend)
